@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Atlas Six | Indie RPG",
+  title: "The Atlas Six ",
   description: "A story-driven fantasy RPG forged from real friendship.",
 };
 

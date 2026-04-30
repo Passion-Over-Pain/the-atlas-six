@@ -1,9 +1,11 @@
+import { Hero } from "./components/sections/hero";
+import { Navbar } from "@/app/components/navbar";
 export default function Home() {
   return (
     <div>
-      <h1 className="text-4xl font-display text-gold text-center items-center justify-center h-screen flex">
-        Welcome to The Atlas Six RPG
-      </h1>
+      <Navbar />
+      <Hero />
+      <Hero />
     </div>
   );
 }
