@@ -24,8 +24,10 @@ export const Navbar = () => {
       <Button
         variant="secondary"
         className="px-6 py-2 text-[10px]"
-        href="github.com"
+        href="https://github.com/Passion-Over-Pain/the-atlas-six"
+        target="_blank"
       >
+        {/* TODO:// Add proper GitHub staring functionality */}
         Join Waitlist
       </Button>
     </nav>

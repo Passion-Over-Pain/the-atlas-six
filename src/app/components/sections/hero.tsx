@@ -56,8 +56,20 @@ export const Hero = () => {
 
           <div className="flex flex-wrap justify-center gap-6">
             <Button variant="secondary">Meet the Party</Button>
-            <Button variant="primary">Join the Waitlist</Button>
-            <Button variant="ghost">Docs</Button>
+            <Button
+              variant="primary"
+              href="https://github.com/Passion-Over-Pain/the-atlas-six"
+              target="_blank"
+            >
+              Join the Waitlist
+            </Button>
+            <Button
+              variant="ghost"
+              href="https://github.com/Passion-Over-Pain/the-atlas-six"
+              target="_blank"
+            >
+              Docs
+            </Button>
           </div>
         </motion.div>
       </div>

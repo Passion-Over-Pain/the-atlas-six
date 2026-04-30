@@ -5,16 +5,21 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost";
   children: React.ReactNode;
   href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const Button = ({
   variant = "primary",
   children,
-  className,
+  className = "",
+  href,
+  target,
+  rel,
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    "cursor-pointer px-8 py-3 font-ui tracking-widest text-xs uppercase transition-all duration-300 active:scale-95";
+    "inline-block cursor-pointer px-8 py-3 font-ui tracking-widest text-xs uppercase transition-all duration-300 active:scale-95 text-center";
 
   const variants = {
     primary:
@@ -24,12 +29,22 @@ export const Button = ({
     ghost: "text-parchment/60 hover:text-gold hover:bg-white/5",
   };
 
+  const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={combinedClasses}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : rel}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <button
-      className={`${baseStyles} ${variants[variant]} ${className}`}
-      href={props.href}
-      {...props}
-    >
+    <button className={combinedClasses} {...props}>
       {children}
     </button>
   );
