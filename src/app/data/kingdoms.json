@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "AURELIA_ID",
+        "kingdomName": "Aurelia",
+        "element": "Water",
+        "description": "Elven agricultural archipelago.",
+        "loreDetails": "Aurelia is the heart of the world, a simple-living elven kingdom where farmers, fishers, and mystics live in harmony with the sea..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [3200, -850],
+            [5500, -850],
+            [5500, -1450],
+            [3200, -1450],
+            [3200, -850]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ERYNDOR_ID",
+        "kingdomName": "Eryndor",
+        "element": "Earth",
+        "description": "Rugged, snowy mountains with a great wall.",
+        "loreDetails": "Eryndor is a land of hard steel and harder people. Founded by Juggernaut knights who fortified the passes..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [3200, 0],
+            [3200, -850],
+            [0, -850],
+            [0, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "KUROHANA_ID",
+        "kingdomName": "Kurohana",
+        "element": "Fire",
+        "description": "Feudal Japan, cherry blossoms, volcanoes.",
+        "loreDetails": "The land of the Eternal Blossom. Kurohana is ruled by powerful clans of Samurai and Ninja..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [5500, 0],
+            [10000, 0],
+            [10000, -1100],
+            [5500, -1100],
+            [5500, 0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "VALDORA_ID",
+        "kingdomName": "Valdora",
+        "element": "Mystic Magic",
+        "description": "Dense forest, mage towers, ancient libraries.",
+        "loreDetails": "A sprawling woodland where the veil between worlds is thin. Mage towers rise like great stone trees..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, -1450],
+            [3800, -1450],
+            [3800, -2160],
+            [0, -2160],
+            [0, -1450]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HOLLOWIND_ID",
+        "kingdomName": "Hollowind",
+        "element": "Wind Magic",
+        "description": "Steampunk + Ancient Egypt desert.",
+        "loreDetails": "The winds are always moving in Hollowind. Here, ancient pyramids hide massive clockwork mechanisms..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [6000, -1100],
+            [10000, -1100],
+            [10000, -2160],
+            [6000, -2160],
+            [6000, -1100]
+          ]
+        ]
+      }
+    }
+  ]
+}

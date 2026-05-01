@@ -61,7 +61,6 @@ export const Characters = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {/* ===== HEADER ===== */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ y: 20, opacity: 0 }}
@@ -189,7 +188,7 @@ export const Characters = () => {
                 />
               </div>
 
-              <span className="font-ui text-[10px] tracking-tighter text-parchment/40">
+              <span className="font-ui text-[16px] tracking-tighter text-parchment/40">
                 {key}
               </span>
 

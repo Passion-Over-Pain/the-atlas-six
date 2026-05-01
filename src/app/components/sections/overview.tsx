@@ -1,5 +1,5 @@
 "use client";
-import { OverviewCard } from "@/app/components/overview-card";
+import { OverviewCard } from "@/app/components/features/overview-card";
 import { FEATURES } from "@/app/constants/features";
 import { motion, Variants } from "framer-motion";
 
