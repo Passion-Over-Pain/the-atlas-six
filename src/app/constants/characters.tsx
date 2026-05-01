@@ -14,8 +14,8 @@ export interface Character {
     Mana: number;
     Charisma: number;
   };
-  portrait: string; // Main center image
-  thumbnail: string; // Selector preview image
+  portrait: string;
+  thumbnail: string;
 }
 
 export const CHARACTERS: Character[] = [
