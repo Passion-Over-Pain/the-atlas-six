@@ -171,7 +171,6 @@ export const Characters = () => {
           transition={{ delay: 0.4 }}
           className="mt-12 bg-white/2 border border-white/5 p-8 grid grid-cols-2 md:grid-cols-6 gap-8 relative"
         >
-          {/* Background label */}
           <div className="absolute -top-4 right-8 bg-gold px-4 py-1 text-obsidian font-ui text-[10px] tracking-widest font-bold">
             Background: {activeChar.species}
           </div>
