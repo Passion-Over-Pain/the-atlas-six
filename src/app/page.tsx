@@ -5,6 +5,7 @@ import { SectionDivider } from "@/app/components/ui/section-divider";
 import { Characters } from "@/app/components/sections/characters";
 import { InteractiveMapSection } from "./components/sections/map";
 import { JourneySection } from "./components/sections/journey";
+import { GameplayShowcase } from "./components/sections/gameplay";
 export default function Home() {
   return (
     <div>
@@ -17,6 +18,8 @@ export default function Home() {
       <InteractiveMapSection />
       <SectionDivider />
       <JourneySection />
+      <SectionDivider variant="secondary" />
+      <GameplayShowcase />
     </div>
   );
 }
