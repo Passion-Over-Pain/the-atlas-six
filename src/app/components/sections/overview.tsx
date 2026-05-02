@@ -28,7 +28,7 @@ export const WorldOverview = () => {
   };
 
   return (
-    <section className="relative py-24 px-12 max-w-7xl mx-auto">
+    <section id="overview" className="relative py-24 px-12 max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20">
         {/* LEFT COLUMN: Narrative & Note */}
         <motion.div

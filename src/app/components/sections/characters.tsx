@@ -54,7 +54,10 @@ export const Characters = () => {
   };
 
   return (
-    <section className="relative min-h-screen py-24 px-12 bg-obsidian overflow-hidden">
+    <section
+      id="characters"
+      className="relative min-h-screen py-24 px-12 bg-obsidian overflow-hidden"
+    >
       <motion.div
         className="max-w-7xl mx-auto h-full"
         initial={{ opacity: 0 }}
