@@ -174,8 +174,6 @@ export const Characters = () => {
           <div className="absolute -top-4 right-8 bg-gold px-4 py-1 text-obsidian font-ui text-[10px] tracking-widest font-bold">
             Background: {activeChar.species}
           </div>
-
-          {/* Stats grid */}
           {Object.entries(activeChar.stats).map(([key, val]) => (
             <div key={key} className="flex flex-col items-center gap-2">
               <div className="relative w-8 h-8 opacity-70 mb-1">
@@ -197,7 +195,6 @@ export const Characters = () => {
             </div>
           ))}
 
-          {/* Character quote */}
           <div className="col-span-full mt-6 border-t border-white/5 pt-6 text-center">
             <AnimatePresence mode="wait">
               <motion.p
