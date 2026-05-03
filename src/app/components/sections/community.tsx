@@ -11,8 +11,20 @@ interface Supporter {
   html_url: string;
 }
 
+interface Particle {
+  id: number;
+  width: string;
+  height: string;
+  top: string;
+  left: string;
+  delay: string;
+}
+
 export const CommunitySection = () => {
   const [supporters, setSupporters] = useState<Supporter[]>([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [mounted, setMounted] = useState(false);
+
   const repoOwner = "Passion-Over-Pain";
   const repoName = "the-atlas-six";
 
@@ -24,18 +36,28 @@ export const CommunitySection = () => {
   };
 
   useEffect(() => {
+    setMounted(true);
+    // Generate stable particle data once on mount
+    const newParticles = [...Array(30)].map((_, i) => ({
+      id: i,
+      width: Math.random() * 3 + "px",
+      height: Math.random() * 3 + "px",
+      top: Math.random() * 100 + "%",
+      left: Math.random() * 100 + "%",
+      delay: Math.random() * 5 + "s",
+    }));
+    setParticles(newParticles);
+
     const fetchStars = async () => {
       try {
         const res = await fetch(
           `https://api.github.com/repos/${repoOwner}/${repoName}/stargazers`,
         );
         const data = await res.json();
-
         const combined = [
           ...NON_STAR_FRIENDS,
           ...(Array.isArray(data) ? data : []),
         ];
-
         setSupporters(combined);
       } catch (err) {
         console.error("Failed to fetch stars", err);
@@ -54,20 +76,22 @@ export const CommunitySection = () => {
                      linear-gradient(180deg, #0b0c10, rgba(26, 20, 12, 0.95), #0b0c10)`,
       }}
     >
+      {/* Particles only render if mounted to prevent hydration mismatch */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full animate-pulse"
-            style={{
-              width: Math.random() * 3 + "px",
-              height: Math.random() * 3 + "px",
-              top: Math.random() * 100 + "%",
-              left: Math.random() * 100 + "%",
-              animationDelay: Math.random() * 5 + "s",
-            }}
-          />
-        ))}
+        {mounted &&
+          particles.map((p) => (
+            <div
+              key={p.id}
+              className="absolute bg-white rounded-full animate-pulse"
+              style={{
+                width: p.width,
+                height: p.height,
+                top: p.top,
+                left: p.left,
+                animationDelay: p.delay,
+              }}
+            />
+          ))}
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -78,6 +102,16 @@ export const CommunitySection = () => {
           <h2 className="font-display text-5xl md:text-6xl text-parchment uppercase tracking-tighter">
             Our <span className="text-gold">Community</span>
           </h2>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="font-body italic text-parchment/50 mt-4"
+          >
+            Friends, playtesters, mentors, and the kind souls who starred the
+            repo.
+          </motion.p>
         </header>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-20 gap-x-12 justify-items-center">
@@ -94,17 +128,14 @@ export const CommunitySection = () => {
               transition={{ delay: (i % 10) * 0.05 }}
               whileHover={{ y: -10 }}
             >
-              {/* Profile Image Node*/}
               <div className="relative">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full  overflow-hidden shadow-[0_0_30px_rgba(218,165,32,0.1)]">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-[0_0_30px_rgba(218,165,32,0.1)]">
                   <img
                     src={s.avatar_url}
                     alt={s.login}
-                    className="w-full h-full rounded-full  transition-all duration-700 object-cover"
+                    className="w-full h-full rounded-full transition-all duration-700 object-cover"
                   />
                 </div>
-
-                {/* GitHub Gold Badge - Centered directly under picture */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-obsidian border border-gold rounded-full p-2 shadow-xl z-20 group-hover:scale-110 transition-transform">
                   <svg
                     className="w-4 h-4 text-gold fill-current"
@@ -114,20 +145,19 @@ export const CommunitySection = () => {
                   </svg>
                 </div>
               </div>
-
-              {/* Supporter Name Label */}
               <span className="mt-8 font-ui text-[10px] tracking-widest text-gold opacity-60 group-hover:opacity-100 transition-opacity uppercase">
                 @{s.login}
               </span>
             </motion.a>
           ))}
         </div>
+
         <div className="mt-32 text-center">
           <Button onClick={handleStarAction} variant="primary">
-            Star on GitHub
+            Join Waitlist
           </Button>
-          <p className="text-sm text-parchment/60 mt-4">
-            Join our community of seekers and help us reach the stars!
+          <p className="font-body text-xl text-parchment/90 leading-relaxed space-y-8 my-4">
+            Join the community of seekers and help us reach the stars.
           </p>
         </div>
       </div>
