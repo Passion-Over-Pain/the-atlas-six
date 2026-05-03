@@ -64,7 +64,10 @@ export const GameplayShowcase = () => {
   }, [activeFeature]);
 
   return (
-    <section className="relative py-24 px-6 md:px-12 bg-[#0b0c10] ">
+    <section
+      id="gameplay"
+      className="relative py-24 px-6 md:px-12 bg-[#0b0c10] "
+    >
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-20">
           <span className="font-ui text-[10px] tracking-[0.5em] text-gold/60 uppercase block mb-4">

@@ -1,8 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
 export const JourneySection = () => {
   return (
     <section
+      id="story"
       className="relative py-24 px-6 md:px-12 w-full min-h-screen"
       style={{
         background: `radial-gradient(ellipse 60% 80% at 30% 50%, rgba(180, 120, 40, 0.05) 0%, transparent 60%), 

@@ -22,7 +22,7 @@ export const InteractiveMapSection: React.FC = () => {
   return (
     <section
       className="relative w-full min-h-screen bg-obsidian flex flex-col pb-24"
-      id="map-section"
+      id="world"
     >
       {/* HEADER UI (Title + Legend) */}
       <div className="relative z-3000 pt-12 pb-8 px-6 text-center border-b border-gold/10">

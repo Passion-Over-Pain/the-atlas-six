@@ -8,17 +8,23 @@ export const Navbar = () => {
       </div>
 
       <div className="hidden md:flex gap-8 text-[10px] tracking-[0.3em] font-ui text-parchment/70 uppercase">
-        {["The World", "Characters", "Kingdoms", "Combat", "Devlog"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-gold transition-colors"
-            >
-              {item}
-            </a>
-          ),
-        )}
+        {[
+          "Overview",
+          "Characters",
+          "World",
+          "Story",
+          "Gameplay",
+          "Community",
+          "Devlog",
+        ].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="hover:text-gold transition-colors"
+          >
+            {item}
+          </a>
+        ))}
       </div>
 
       <Button
