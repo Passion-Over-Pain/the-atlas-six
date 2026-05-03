@@ -127,6 +127,7 @@ export const Characters = () => {
                   src={activeChar.portrait}
                   alt={activeChar.name}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-contain"
                   priority
                 />

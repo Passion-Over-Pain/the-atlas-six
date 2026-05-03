@@ -15,6 +15,7 @@ export const Navbar = () => {
           "Story",
           "Gameplay",
           "Community",
+          "Devlog",
         ].map((item) => (
           <a
             key={item}

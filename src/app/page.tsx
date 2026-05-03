@@ -7,6 +7,9 @@ import { InteractiveMapSection } from "./components/sections/map";
 import { JourneySection } from "./components/sections/journey";
 import { GameplayShowcase } from "./components/sections/gameplay";
 import { CommunitySection } from "./components/sections/community";
+import { DevLogSection } from "./components/sections/devlog";
+import { Footer } from "./components/sections/footer";
+import { EntityGallery } from "./components/sections/entity-gallery";
 export default function Home() {
   return (
     <div>
@@ -17,12 +20,16 @@ export default function Home() {
       <Characters />
       <SectionDivider />
       <InteractiveMapSection />
+      <EntityGallery />
       <SectionDivider />
       <JourneySection />
       <SectionDivider />
       <GameplayShowcase />
       <SectionDivider />
       <CommunitySection />
+      <SectionDivider />
+      <DevLogSection />
+      <Footer />
     </div>
   );
 }
