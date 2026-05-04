@@ -43,7 +43,7 @@ export const WorldOverview = () => {
             </span>
             <h2 className="font-display text-5xl text-parchment leading-tight">
               FIVE KINGDOMS. <br />
-              <span className="text-gold">ONE PURPOSE.</span>
+              <span className="text-gold">ONE WAR.</span>
             </h2>
           </header>
 

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* Syncing your custom palette to v4 */
   --color-obsidian: #0d0b09;
   --color-charcoal: #111010;
   --color-surface: #201d19;
@@ -30,12 +29,9 @@
 
 @layer base {
   body {
-    /* v4 automatically handles theme variables */
     background-color: var(--color-obsidian);
     color: var(--color-parchment);
   }
-
-  /* Selection styling */
   ::selection {
     background-color: color-mix(in srgb, var(--color-gold) 20%, transparent);
     color: var(--color-parchment);
@@ -44,7 +40,7 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-obsidian);

@@ -1,56 +1,50 @@
-export interface Entity {
+export interface Kingdom {
   id: string;
   name: string;
-  rarity: "COMMON" | "ELITE" | "LEGENDARY" | "MYTHIC";
+  type: string;
   description: string;
   imageUrl: string;
-  accent: string; // Tailwind color for the border (e.g., 'gold', 'red', 'purple')
 }
 
-export const WORLD_ENTITIES: Entity[] = [
+export const KINGDOMS: Kingdom[] = [
   {
-    id: "eryndar-knight",
-    name: "Eryndar Knight",
-    rarity: "ELITE",
+    id: "aurelia",
+    name: "Aurelia",
+    type: "Water",
     description:
-      "Bound by steel and a dying oath, these sentinels guard the crumbled spires of the north.",
-    imageUrl: "/images/entities/knight.jpg",
-    accent: "border-blue-400/40",
+      "A peaceful heart of radiant forests and shimmering lakes. Ruled by ancient scholars, they master the healing arts and nature magic, guarding the world's wisdom with strategic grace.",
+    imageUrl: "/characters/aurelia.webp",
   },
   {
-    id: "kurohanese-samurai",
-    name: "Kurohanese Samurai",
-    rarity: "ELITE",
+    id: "eryndor",
+    name: "Eryndor",
+    type: "Earth",
     description:
-      "Masters of the shadow-blade who wander the mist-choked marshes of Kurohan.",
-    imageUrl: "/images/entities/samurai.jpg",
-    accent: "border-red-500/40",
+      "A military titan forged in mountain flame. Governed by a rigid aristocracy of knights and earth-shapers, they prize honour and raw conquering strength above all else.",
+    imageUrl: "/characters/eryndor.webp",
   },
   {
-    id: "valdorian-mage",
-    name: "Valdorian Mage",
-    rarity: "MYTHIC",
+    id: "kurohana",
+    name: "Kurohana",
+    type: "Fire",
     description:
-      "Wielders of the raw, unstable ether that leaks from the cracks in the sky.",
-    imageUrl: "/characters/eye.webp",
-    accent: "border-purple-500/40",
+      "A volcanic realm of cherry blossoms and ancestral pride. Their warriors blend lethal fire magic with artistic ferocity, fueled by a deep-rooted hatred for their rivals in Eryndor.",
+    imageUrl: "/characters/kurohana.webp",
   },
   {
-    id: "fallow-ghoul",
-    name: "Fallow Ghoul",
-    rarity: "COMMON",
+    id: "valdora",
+    name: "Valdora",
+    type: "Arcane",
     description:
-      "The hollowed remains of those who stayed too long in the blighted fields.",
-    imageUrl: "/images/entities/ghoul.jpg",
-    accent: "border-zinc-500/40",
+      "The cradle of magical mystery hidden in deep woods. Ruled by circles of Archmages, they relentlessly pursue ancient knowledge, balancing supreme wisdom with dangerous power.",
+    imageUrl: "/characters/valdora.webp",
   },
   {
-    id: "ancient-dragon",
-    name: "Void-Drake",
-    rarity: "LEGENDARY",
+    id: "hollowind",
+    name: "Hollowind",
+    type: "Air",
     description:
-      "A creature of myth that feeds on the heat of dying stars. Its breath is absolute zero.",
-    imageUrl: "/images/entities/dragon.jpg",
-    accent: "border-gold/40",
+      "A smog-choked metropolis of gears and lightning towers. Led by secretive guilds, they wield shadow magic to power machines that can shift the tides of any war.",
+    imageUrl: "/characters/hollowind.webp",
   },
 ];
