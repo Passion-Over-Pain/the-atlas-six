@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { NON_STAR_FRIENDS } from "@/app/constants/non-star-friends";
 import { Button } from "@/app/components/ui/button";
+import { handleStarAction } from "@/app/actions";
 
 interface Supporter {
   login: string;
@@ -24,16 +25,8 @@ export const CommunitySection = () => {
   const [supporters, setSupporters] = useState<Supporter[]>([]);
   const [particles, setParticles] = useState<Particle[]>([]);
   const [mounted, setMounted] = useState(false);
-
   const repoOwner = "Passion-Over-Pain";
   const repoName = "the-atlas-six";
-
-  const handleStarAction = () => {
-    const backendUrl =
-      "https://portfolio-backend-pi-three.vercel.app/api/auth/login";
-    const intent = "star";
-    window.location.href = `${backendUrl}?intent=${intent}&repoOwner=${repoOwner}&repoName=${repoName}`;
-  };
 
   useEffect(() => {
     setMounted(true);

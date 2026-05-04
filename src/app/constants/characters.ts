@@ -35,7 +35,7 @@ export const CHARACTERS: Character[] = [
       Mana: 120,
       Charisma: 120,
     },
-    portrait: "/characters/eye.webp",
+    portrait: "/characters/phoenix.webp",
     thumbnail: "/characters/phoenix.webp",
   },
   {
@@ -73,7 +73,7 @@ export const CHARACTERS: Character[] = [
       Mana: 60,
       Charisma: 60,
     },
-    portrait: "/characters/eye.webp",
+    portrait: "/characters/titan.webp",
     thumbnail: "/characters/titan.webp",
   },
   {
@@ -92,7 +92,7 @@ export const CHARACTERS: Character[] = [
       Mana: 160,
       Charisma: 80,
     },
-    portrait: "/characters/eye.webp",
+    portrait: "/characters/healer.webp",
     thumbnail: "/characters/healer.webp",
   },
 ];
