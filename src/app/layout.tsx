@@ -74,6 +74,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="OCRe2D0AjtX4L0WMnnFrAVwqrfxnvb4xVSrBxAYQBpY"
+        />
+      </head>
       <body
         className={`${cinzel.variable} ${cormorant.variable} ${dmSans.variable} bg-obsidian text-parchment antialiased`}
         suppressHydrationWarning
