@@ -76,6 +76,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={`${cinzel.variable} ${cormorant.variable} ${dmSans.variable} bg-obsidian text-parchment antialiased`}
+        suppressHydrationWarning
       >
         <StructuredData />
         {children}
